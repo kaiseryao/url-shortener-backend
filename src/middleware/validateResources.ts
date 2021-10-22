@@ -14,7 +14,7 @@ const validateResources = (ressourceSchema: AnyObjectSchema) => async (
         });
         next();
     } catch (e) {
-        return res.sendStatus(401);
+        return res.sendStatus(400);
     }
 };
 
