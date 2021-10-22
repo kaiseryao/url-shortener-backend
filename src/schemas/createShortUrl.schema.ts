@@ -1,7 +1,7 @@
-import {object, string} from 'yup'
-
-
+import { object, string } from 'yup'
 
 export default object({
-    destination: string().required("Destination is required"),
+    body: object({
+        destination: string().required("Destination is required")
+    }),
 });

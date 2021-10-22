@@ -1,20 +1,20 @@
 import { AnyObjectSchema } from 'yup';
 import { Request, Response, NextFunction } from 'express';
 
-const validateResources = (ressourceSchema: AnyObjectSchema) => async (
+const validateResources = (resourceSchema: AnyObjectSchema) => async (
     req: Request,
     res: Response,
     next: NextFunction
 ) => {
     try {
-        await ressourceSchema.validate({
+        await resourceSchema.validate({
             body: req.body,
             query: req.query,
             params: req.params,
         });
         next();
     } catch (e) {
-        return res.sendStatus(400);
+        return res.status(400).send(e);
     }
 };
 
