@@ -1,6 +1,6 @@
 .DS_Store
 node_module
-config
+
 
 
 # local env files
@@ -22,3 +22,4 @@ pnpm-debug.log*
 *.sln
 *.sw?
 node_modules
+config
